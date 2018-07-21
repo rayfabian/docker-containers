@@ -24,7 +24,7 @@ ENV MULE_DOWNLOAD_URL=https://repository-master.mulesoft.org/nexus/content/repos
 
     # Add user (and group) which will run Mule ESB in the container.
 RUN groupadd -f ${RUN_AS_USER} && \
-    sudo dscl  --system --home /home/${RUN_AS_USER} -g ${RUN_AS_USER} ${RUN_AS_USER} && \
+    useradd  --system --home /home/${RUN_AS_USER} -g ${RUN_AS_USER} ${RUN_AS_USER} && \
     # Updates for Debian.
     apt-get update && \
     apt-get dist-upgrade -y && \
