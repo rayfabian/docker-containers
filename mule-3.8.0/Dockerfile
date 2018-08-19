@@ -1,4 +1,4 @@
-FROM rayfabian/java8-alpine:3.8
+FROM rayfabian/alpine-jdk:8
 
 # Define environment variables.
 ENV MULE_HOME /opt/mule
